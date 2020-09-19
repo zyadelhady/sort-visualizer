@@ -26,7 +26,7 @@ const generateArray = () => {
 
 export const Visualizer: FC<visualizerProps> = (props) => {
   const [arr, setArr] = useState(generateArray());
-  const [speed, setSpeed] = useState(1);
+  const [speed, setSpeed] = useState(25);
   const [isSorting, setIsSorting] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
 
@@ -93,7 +93,7 @@ export const Visualizer: FC<visualizerProps> = (props) => {
   };
 
   const speedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSpeed(+e.target.value < 1 ? 1 : +e.target.value);
+    setSpeed(+e.target.value < 25 ? 25 : +e.target.value);
   };
 
   return (
@@ -120,7 +120,7 @@ export const Visualizer: FC<visualizerProps> = (props) => {
           id="speed"
           name="speed"
           type="number"
-          min="1"
+          min="25"
           onChange={speedHandler}
           value={speed}
           disabled={isSorting}
