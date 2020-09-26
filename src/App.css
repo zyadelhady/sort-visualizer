@@ -16,7 +16,7 @@
 }
 
 .line {
-  transition: all 0.1s;
+  transition: height 200ms;
 }
 
 .container {
