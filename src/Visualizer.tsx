@@ -26,7 +26,7 @@ const generateArray = () => {
 
 export const Visualizer: FC<visualizerProps> = (props) => {
   const [arr, setArr] = useState(generateArray());
-  const [speed, setSpeed] = useState(1);
+  const [speed, setSpeed] = useState(25);
   const [isSorting, setIsSorting] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
 
